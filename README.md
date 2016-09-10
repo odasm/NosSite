@@ -1,9 +1,23 @@
-# NosSite
-NosTale Homepage 
-
+NosTale Homepage
 
 Installation:
-
-Schritt 1: 
+_________________________________________________________________________________________________________________________________________
+Schritt 1:
 
 XAMPP DOWNLOAD: https://www.apachefriends.org/de/download.html
+_________________________________________________________________________________________________________________________________________
+
+Schritt 2:
+
+Apache Starten - http://image.prntscr.com/image/0fef8dcbbf624b1c940a074c825f240c.png (Achte darauf, dass der PORT 80 ausgeschaltet ist)
+_________________________________________________________________________________________________________________________________________
+
+Schritt 3:
+
+Gehe in den HTDOCS Ordner und lösche alle Datein aus dem Ordner.
+_________________________________________________________________________________________________________________________________________
+
+Schritt 4:
+
+Downloade dir die NosSite Files und entpacke diese im HTDOCS Ordner.
+_________________________________________________________________________________________________________________________________________
