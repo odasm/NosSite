@@ -107,7 +107,7 @@ ob_end_flush ();
                                     Hilfe, ich kann meinen Account nicht aktivieren!                                </a>
                             </div>
                             <p class="info_text">
-                                * Diese Felder bitte ausfüllen.                            </p>
+                                * Diese Felder bitte ausfÃ¼llen.                            </p>
                         </div>  
                     </form>
 
@@ -181,7 +181,7 @@ ob_end_flush ();
 					<!-- START NAVIGATION -->
                     	                        <ul>
                             <li id="mainNavNews">
-                                <a href="/en/news/index/" title="Startseite" ><span>News</span></a>
+                                <a href="news/index/" title="Startseite" ><span>News</span></a>
                                 <!--START  Navigation Aktiv -->
                                 <div class="active_wrapper">
                                     <div class="active_content">
@@ -331,7 +331,7 @@ ob_end_flush ();
                                     <li><a href="http://de.nostale.gameforge.com/game/npc">NosTales Einwohner</a></li>
                                     <li><a href="http://de.nostale.gameforge.com/game/charakter_classes/">Charakterklassen</a></li>
                                     <li><a href="http://de.nostale.gameforge.com/game/glossary">Glossar</a></li>
-                                    <li><a href="http://de.nostale.gameforge.com/game/faq">FAQ - Häufige Fragen</a></li>
+                                    <li><a href="http://de.nostale.gameforge.com/game/faq">FAQ - HÃ¤ufige Fragen</a></li>
                                     <li><a href="http://support.de.nostale.gameforge.com/">Support</a></li>
                                 </ul>
                             </nav>
@@ -342,7 +342,7 @@ ob_end_flush ();
                         		<a href='http://www.elitepvpers.com/forum/members/6663195-shido-.html' target='_blank'><img src="/images/edit.gif" /></a>
                         	</p>
                             <p>
-                                © 2007 Entwell Co., Ltd. Veröffentlicht von der Gameforge 4D GmbH. <br />
+                                Â© 2007 Entwell Co., Ltd. VerÃ¶ffentlicht von der Gameforge 4D GmbH. <br />
 Alle Rechte vorbehalten. Die Rechte an allen Marken liegen bei ihrem jeweiligen Inhaber.                            </p>
                             <p>                            
                                 <a href="">Impressum</a> - <a href="http://www.elitepvpers.com/forum/nostale/">Elitepvpers</a>
@@ -616,7 +616,7 @@ var gameImg=document.createElement("img");gameImg.src=""+data[gameName];gameImg.
                 <!--<div id="mmoGames"></div>-->
 
                 <div id="mmoLangs">
-                        <label>Land wählen:</label>
+                        <label>Land wÃ¤hlen:</label>
                         <div id="mmoLangSelect" class="mmoSelectbox">
                             <div id="mmoSarea1" onclick="mmoShowOptions(1)" class="mmoSelectArea">
                                 <div class="mmoSelectText" id="mmoMySelectContent1">
@@ -625,13 +625,13 @@ var gameImg=document.createElement("img");gameImg.src=""+data[gameName];gameImg.
                             </div>
                             <div class="mmoOptionsDivInvisible" id="mmoOptionsDiv1">
                                 <ul class="mmoLangList" id="mmoList1">
-    <li><a href="//nostale.cz/?kid=5-09131-09106-1105-120121a7" target="_top" rel="nofollow" class="mmoflag mmo_CZ">Ceská Republika</a></li>
+    <li><a href="//nostale.cz/?kid=5-09131-09106-1105-120121a7" target="_top" rel="nofollow" class="mmoflag mmo_CZ">CeskÃ¡ Republika</a></li>
 <li class="mmoActive"><a href="//nostale.de/?kid=5-09106-09106-1105-12012196" target="_top" rel="nofollow" class="mmoflag mmo_DE">Deutschland</a></li>
-<li><a href="//nostale.org/?kid=5-09109-09106-1105-1201214c" target="_top" rel="nofollow" class="mmoflag mmo_ES">España</a></li>
+<li><a href="//nostale.org/?kid=5-09109-09106-1105-1201214c" target="_top" rel="nofollow" class="mmoflag mmo_ES">EspaÃ±a</a></li>
 <li><a href="//nostale.fr/?kid=5-09108-09106-1105-12012124" target="_top" rel="nofollow" class="mmoflag mmo_FR">France</a></li>
 <li><a href="//nostale.it/?kid=5-09110-09106-1105-1201211b" target="_top" rel="nofollow" class="mmoflag mmo_IT">Italia</a></li>
 <li><a href="//nostale.pl/?kid=5-09111-09106-1105-120121c2" target="_top" rel="nofollow" class="mmoflag mmo_PL">Polska</a></li>
-<li><a href="//nostale.web.tr/?kid=5-09114-09106-1105-120121f4" target="_top" rel="nofollow" class="mmoflag mmo_TR">Türkiye</a></li>
+<li><a href="//nostale.web.tr/?kid=5-09114-09106-1105-120121f4" target="_top" rel="nofollow" class="mmoflag mmo_TR">TÃ¼rkiye</a></li>
 <li><a href="//nostale.co.uk/?kid=5-09107-09106-1105-1201212d" target="_top" rel="nofollow" class="mmoflag mmo_EN">United Kingdom</a></li>
                                 </ul>
                             </div>
@@ -655,7 +655,7 @@ var gameImg=document.createElement("img");gameImg.src=""+data[gameName];gameImg.
                                 <h5>Empfohlenes Spiel</h5>
                                 <ul id="mmoGamesOverview_featured">
                                                     <li>
-                                            <a href="http://aionfreetoplay.com/?kid=5-62006-09106-1105-12028174" title="Verdiene dir deine Flügel" target="_blank">
+                                            <a href="http://aionfreetoplay.com/?kid=5-62006-09106-1105-12028174" title="Verdiene dir deine FlÃ¼gel" target="_blank">
                                                 <span id="gameImgTarget_aion" class="gameImgTarget"></span>
                                                 <span class="gameName">AION Free-to-Play</span>
                                             </a>
@@ -681,7 +681,7 @@ var gameImg=document.createElement("img");gameImg.src=""+data[gameName];gameImg.
                                         Orcs Must Die! Unchained                                            </a>
                                         </li>
                                                                             <li class="mmoGameIcon mmoGameIcon_metin2 mmoGameIcon_metin2_de">
-                                            <a href="http://metin2.de/?kid=5-02006-09106-1105-12028110" title="Schärfe Klinge und Geist" target="_blank">
+                                            <a href="http://metin2.de/?kid=5-02006-09106-1105-12028110" title="SchÃ¤rfe Klinge und Geist" target="_blank">
                                                 <span id="gameImgTarget_metin2" class="gameImgTarget"></span>
                                         Metin2                                            </a>
                                         </li>
@@ -696,7 +696,7 @@ var gameImg=document.createElement("img");gameImg.src=""+data[gameName];gameImg.
                                         4Story                                            </a>
                                         </li>
                                                                             <li class="mmoGameIcon mmoGameIcon_runesofmagic mmoGameIcon_runesofmagic_de">
-                                            <a href="http://de.runesofmagic.gameforge.com/?kid=5-46806-09106-1105-12028186" title="DAS PREISGEKRÖNTE MMORPG" target="_blank">
+                                            <a href="http://de.runesofmagic.gameforge.com/?kid=5-46806-09106-1105-12028186" title="DAS PREISGEKRÃ–NTE MMORPG" target="_blank">
                                                 <span id="gameImgTarget_runesofmagic" class="gameImgTarget"></span>
                                         Runes of Magic                                            </a>
                                         </li>
@@ -721,7 +721,7 @@ var gameImg=document.createElement("img");gameImg.src=""+data[gameName];gameImg.
                                     Ikariam                                            </a>
                                         </li>
                                                                             <li class="mmoGameIcon mmoGameIcon_battleknight mmoGameIcon_battleknight_de">
-                                            <a href="http://battleknight.de/?kid=5-01906-09106-1105-120281b6" title="Für Ruhm und den König" target="_blank">
+                                            <a href="http://battleknight.de/?kid=5-01906-09106-1105-120281b6" title="FÃ¼r Ruhm und den KÃ¶nig" target="_blank">
                                                 <span id="gameImgTarget_battleknight" class="gameImgTarget"></span>
                                     BattleKnight                                            </a>
                                         </li>
@@ -736,7 +736,7 @@ var gameImg=document.createElement("img");gameImg.src=""+data[gameName];gameImg.
                                     BiteFight                                            </a>
                                         </li>
                                                                             <li class="mmoGameIcon mmoGameIcon_kingsage mmoGameIcon_kingsage_de">
-                                            <a href="http://de.kingsage.gameforge.com/?kid=5-31106-09106-1105-12028165" title="Es lebe der König!" target="_blank">
+                                            <a href="http://de.kingsage.gameforge.com/?kid=5-31106-09106-1105-12028165" title="Es lebe der KÃ¶nig!" target="_blank">
                                                 <span id="gameImgTarget_kingsage" class="gameImgTarget"></span>
                                     KingsAge                                            </a>
                                         </li>
@@ -746,7 +746,7 @@ var gameImg=document.createElement("img");gameImg.src=""+data[gameName];gameImg.
                                     Tanoth                                            </a>
                                         </li>
                                                                             <li class="mmoGameIcon mmoGameIcon_wildguns mmoGameIcon_wildguns_de">
-                                            <a href="http://wildguns.de/?kid=5-12706-09106-1105-12028190" title="Erobere die Prärie" target="_blank">
+                                            <a href="http://wildguns.de/?kid=5-12706-09106-1105-12028190" title="Erobere die PrÃ¤rie" target="_blank">
                                                 <span id="gameImgTarget_wildguns" class="gameImgTarget"></span>
                                     WildGuns                                            </a>
                                         </li>
