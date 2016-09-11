@@ -1,5 +1,7 @@
 <?php
 include("config.php");
+include("connect-to-db.php");
+session_start();
 ?>
 <!doctype html>
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
@@ -7,7 +9,7 @@ include("config.php");
 <!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
 <!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de"> <!--<![endif]-->
     <head>
         <title><?php echo $website_title; ?></title>
         <meta name="description" content="<?php echo $description; ?>" />
@@ -70,7 +72,7 @@ include("config.php");
     })();
 </script>          
     </head>
-    <body class="de netbar"  > 
+      <body class="de netbar"  > 
 
         <div id="backgroundWrapper">
             <div id="backgroundHeaderWrapper"><div id="backgroundHeader"></div></div>
@@ -79,10 +81,10 @@ include("config.php");
                 <div class="content_box">
                     <h1>Login</h1>
                                         <p>
-                        Noch keinen Account?                        <a href="">
+                        Noch keinen Account?                        <a href="/user/register/">
                             Melde dich kostenlos an!                        </a>
                     </p>
-                                        <form name="loginFormAjax" id="loginFormAjax" action="http://de.nostale.gameforge.com/user/login" method="post">
+                                        <form name="loginFormAjax" id="loginFormAjax" action="/user/login" method="post">
                         <div class="white_box">
                             <img src="//gf3.geo.gfsrv.net/cdnbf/97a8dc1390cdaccf17f30001cc86ab.png" id="loginLayerMascot" alt="" />
                             <div id="loginform" name="loginform">
@@ -133,9 +135,12 @@ include("config.php");
                     </form>
                 </div>
             </div>
-            <div id="wrapper">
+           <div id="wrapper">
+                <header id="header">
+				  <h1></h1>
                 <header id="header">
                     <h1 id="logo"><a href="" title=""></a></h1>
+					<?php if(!isset($_SESSION['username']) || !isset($_SESSION['password'])) { ?>
                     <div id="userLogin">
                         <div id="speechBubble">
                             <div id="speechBubbleArrow"></div>
@@ -150,7 +155,7 @@ include("config.php");
                                             Einloggen                                        </a>
                                     </p>
                                                                         <p class="register_now">
-                                        Noch keinen Account?                                        <a href="">Jetzt registrieren</a>
+                                        Noch keinen Account?                                        <a href="/user/register/">Jetzt registrieren</a>
                                     </p>
                                                                        <div class="clear"></div>
                                 </div> 
@@ -158,11 +163,49 @@ include("config.php");
                             </div>
                         </div>
                     </div>
-                    <img id="mascot" src="//gf1.geo.gfsrv.net/cdn0b/bdb441c2d7dfe852c77ac06b5e80f3.png" alt="" />
+
+					<?php } else { ?>
+					<div id="userLogin">
+                        <div id="speechBubble">
+                            <div id="speechBubbleArrow"></div>
+                            <div class="content">
+                                 <!-- START User Logged in -->
+                                                                
+                                <a href="/user/changeaccountimage/" id="userImage" >
+                                    <img src="/images/profil-images/0.jpg" />
+                                </a> 
+                                <a id='paymentLayer' href="" target="_mall"><div id="userNosTaler"><span></span>0</div></a>
+                                <p id="userName">                            
+                                    Hallo, 
+                                    <strong onclick="show_user_options();">
+                                      <?php echo $_SESSION['username']; ?>                                            <span class="arrow_top_small"> </span>
+                                    </strong>
+                                </p>
+                                <!-- START Hover -->
+                                <div id="useroptions">
+                                    <nav id="userNav">
+                                        <ul>
+                                         <!--  <li><a href="">Einstellungen</a></li>
+                                           <li><a href="" target="_mall">NosTaler Aufladen</a></li> -->
+                                            <li class="last-child"><a href="/user/logout/">Ausloggen</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <!-- ENDE Hover-->
+                                <!--ENDE - User Logged in -->
+                                                                                                <!-- ENDE User log in -->
+                            </div>
+                        </div>
+                    </div>
+
+					<?php } ?>
                     <nav id="mainNav">
+
+					
+					<!-- START NAVIGATION -->
                     	                        <ul>
                             <li id="mainNavNews" class = 'active'>
-                                <a href="" title="News" ><span>News</span></a>
+                                <a href="/news/index/" title="Startseite" ><span>News</span></a>
                                 <!--START  Navigation Aktiv -->
                                 <div class="active_wrapper">
                                     <div class="active_content">
@@ -172,14 +215,6 @@ include("config.php");
                                         <div class="active_triangle"></div>
                                     </div>
                                 </div>
-                                <!-- ENDE Navigation Aktiv-->
-                            </li>
-                            </li>
-                                                        <li id="mainSearch">
-                                <form method="post" action="http://de.nostale.gameforge.com/main/search/">
-                                    <input type="search" onfocus="$('#mainSearch').addClass('active')" onblur="$('#mainSearch').removeClass('active')" id="search" name="search" value=""/>
-                                    <input type="submit" value=" " />
-                                </form>
                             </li>
                         </ul>
                         <div id="foldLeft"></div>
@@ -697,13 +732,10 @@ Alle Rechte vorbehalten. Die Rechte an allen Marken liegen bei ihrem jeweiligen 
                           'width': 1016, //or whatever
                           'height': 657,
                           'type': 'iframe'
-
                         })
                 
             }); 
             
-
-
             function showShop(){    
               $.fancybox.showLoading();
               
@@ -712,14 +744,12 @@ Alle Rechte vorbehalten. Die Rechte an allen Marken liegen bei ihrem jeweiligen 
               
                 function(data) { 
        
-
                       if (data != '0') { 
                        
                         $('#shopLayer2').attr('href', data);  
                         $('#shopLayer2').attr('type', 'iframe');  
                         $("#shopLayer2").click();
                         }                                
-
              
                   else
                   {      
@@ -728,7 +758,6 @@ Alle Rechte vorbehalten. Die Rechte an allen Marken liegen bei ihrem jeweiligen 
                   }
                 }
               );
-
             }
                     function checkLogin() {
                           $.post('/user/ajaxcheckforlogin', {},
@@ -768,7 +797,6 @@ Alle Rechte vorbehalten. Die Rechte an allen Marken liegen bei ihrem jeweiligen 
 //                          }); //post
 //
 //                        }; //getShopLink
-
             function ajaxlogin()
             {
               var url = "http://de.nostale.gameforge.com/ajax/user/login2";
@@ -839,7 +867,6 @@ setPixel ({
 
 <noscript>
 <style type="text/css">
-
  body {margin:0; padding:0;} #mmonetbar { background:transparent url(//gf2.geo.gfsrv.net/cdn47/b6b2ff5467c4d7af175bc42f7208a5.png) repeat-x; font:normal 11px Tahoma, Arial, Helvetica, sans-serif; height:32px; left:0; padding:0; position:absolute; text-align:center; top:0; width:100%; z-index:3000; } #mmonetbar #mmoContent { height:32px; margin:0 auto; width:1024px; position: relative; } #mmonetbar #mmoLogo { background:transparent url(//gf1.geo.gfsrv.net/cdn64/13bb8cf4df395c6039daa221504520.png) no-repeat top left; float:left; display:block; height:32px; width:108px; text-indent: -9999px; } #mmonetbar #mmoNews, #mmonetbar #mmoGame, #mmonetbar #mmoFocus, #pagefoldtarget { display:none !important; } 
 </style>
 </noscript>
@@ -1089,14 +1116,12 @@ mmoTicker();    mmoToggleDisplay.init("mmoGamesOverviewPanel");
                     HTTP_GET_VARS[unescape(vArr[0])] = unescape(v);
                 }
             }
-
             function GET(v) {
                 if (!HTTP_GET_VARS[v]) {
                     return '';
                 }
                 return HTTP_GET_VARS[v];
             }
-
             function openxDetectDeviceOS() {
                 return (function(ua) {
                     if (/iPhone/i.test(ua) || /iPad/.test(ua) || /iPod/.test(ua)) {
@@ -1116,13 +1141,11 @@ mmoTicker();    mmoToggleDisplay.init("mmoGamesOverviewPanel");
                     }
                 })(navigator.userAgent);
             }
-
             function escapeHtml(str) {
                 var div = document.createElement('div');
                 div.appendChild(document.createTextNode(str));
                 return div.innerHTML;
             }
-
             if (openxDetectDeviceOS() == 'desktop') {
                 var params = 'zoneid=1594&source=Quelle&cb=INSERT_RANDOM_NUMBER_HERE&layerstyle=simple&align=right&valign=top&padding=2&shifth=30&shiftv=20&closebutton=t&backcolor=98AE12&bordercolor=EA5521';
                 var m3_r = Math.floor(Math.random() * 99999999999);
